@@ -1,16 +1,20 @@
-function Obtener(obj) {
-    //Obtener y Recorrer las Llaves de un Objeto
-    //Aqui tu codigo
-    conso
+var auto = {
+      marca: 'Chevrolet',
+      año: '2013',
+      modelo: 'Sonic',
+      color:'Gris'};
+  console.log(Object.keys(auto));
 
-}
+  Object.keys(auto).forEach((valor) => {
+    console.log(valor);
+  });
 
-function Fecha(num) {
-    //Escriba una función de JavaScript para obtener el día de una fecha en particular.
-    //Aqui tu codigo
 
-}
+var fecha = new Date('Enero 2, 1969 17:45:00');
+var diaSemana = fecha.getDay();
+console.log(diaSemana);
 
+NO SUPE COMO RESOLVERLO
 function verificarPassword(usuario, password) {
     // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
     // Devuelve "true" si coinciden
@@ -22,13 +26,20 @@ function verificarPassword(usuario, password) {
 }
 
 function crearGato(nombre, edad) {
-    // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
-    // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
-    // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
-    // Devuelve el objeto
-    // Tu código:
-
+    var gato = {
+  nombre : nombre,
+  edad: edad,
+  meow: function (){
+    return "Meow!";
+  }
 }
+return gato;
+}
+var perro = crearGato ('Lupe', 5);
+console.log(perro)
+
+
+Se me incendió la cabeza con este
 function agregarMetodoCalculoDescuento(producto) {
     // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
     // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
@@ -39,10 +50,9 @@ function agregarMetodoCalculoDescuento(producto) {
     // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
     // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
     // Tu código:
+}
 
-}
-function ordenar(array) {
-    // A partir del array pasado por parametros, ordenarlo (ascendente o descendente) de la forma que tu quieras
-    // Mostrar array ordenado.
-    // Tu código:
-}
+
+var nombres = ['Leonardo', 'Diego', 'Lucas', 'Julieta'];
+  nombres.sort();
+console.log(nombres);
